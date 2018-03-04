@@ -1,4 +1,4 @@
-# % Last Change: Thu Mar 01 12:57:40 PM 2018 CST
+# % Last Change: Sat Mar 03 11:31:11 PM 2018 CST
 # Base Image
 FROM alpine:3.7
 
@@ -6,7 +6,7 @@ FROM alpine:3.7
 LABEL maintainer="Tiandao Li <litd99@gmail.com>"
 
 # Installation
-RUN apk add --update-cache R && \
+RUN apk add --update-cache R R-dev g++ R-doc libxml2-dev bash mariadb-dev && \
 	rm -rf /var/cache/apk/* /var/lib/apk/lists/*
 
 # set timezone
